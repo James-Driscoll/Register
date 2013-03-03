@@ -1,9 +1,6 @@
 package uk.ac.shu.webarch.register
 
-class Student {
-
-  String fullstudentname
-  String studentnumber
+class RegClass {
 
     static constraints = {
     }
