@@ -12,7 +12,7 @@ hibernate {
 // environment specific settings
 environments {
     development {
-	datasource {
+	dataSource {
 	    dbCreate = "update"
 	    driverClassName = "com.mysql.jdbc.Driver"
 	    dialect=org.hibernate.dialect.MySQL5Dialect
@@ -30,19 +30,13 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
-            pooled = true
-            properties {
-               maxActive = -1
-               minEvictableIdleTimeMillis=1800000
-               timeBetweenEvictionRunsMillis=1800000
-               numTestsPerEvictionRun=3
-               testOnBorrow=true
-               testWhileIdle=true
-               testOnReturn=true
-               validationQuery="SELECT 1"
-            }
+ 	    dbCreate = "update"
+	    driverClassName = "com.mysql.jdbc.Driver"
+	    dialect=org.hibernate.dialect.MySQL5Dialect
+	    username = "webarch"
+	    password = "webasdfsdfrch"
+	    url = "jdbc:mysql://localhost/register?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"
+	    pooled = true
         }
     }
 }
