@@ -1,22 +1,21 @@
 package uk.ac.shu.webarch.register
 
-class Course {
-  
-  String courseCode
+class Course {					//Class Name
+  			
+  String courseCode				//Attributes
   String courseName
-  String description
+  String courseDescription
   
 
-  /* The set of classes where this course is being taught */
-  Set classes
+  Set classes					//The set of classes where this course is being taught
 
-  static constraints = {
-    courseCode maxSize: 5		//Set maximum sizes for course name and code.
-    courseName maxSize: 50
+  static constraints = {			//Constraints
+  courseCode maxSize: 5			
+  courseName maxSize: 50
   }
 
   static hasMany = [classes: RegClass]		//Relationship to RegClass.
-  static mappedBy = [classes: 'course']
+  static mappedBy = [classes: 'course']		//Where to form the join.
 
 
   static mapping = {

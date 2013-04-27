@@ -1,36 +1,43 @@
 package uk.ac.shu.webarch.register
 
-class Student {
+class Student {					//Class Name.
 
-  String fullStudentName
+  String studentFirstName			//Attributes.
+  String studentLastName
   String studentNumber
-  String notes
+  String studentNotes
 
-  /* The courses this student is enrolled on */
-  Set courses
-
-  /* The set of classes this student has attended */
-  Set classAtts
+  
+  Set courses					//The courses this student is enrolled on.
+  
+  Set classAtts					//The set of classes this student has attended.
 
   /* This demonstrates why the hasMany structure is a list.. in this case we have a
      domain class with many set objects, so the hasMany metadata needs to specify several
      different sets */
-  static hasMany = [
+
+  static hasMany = [				//Relationships.
     courses: Enrollment,
     classAtts: RegisterEntry
   ]
 
-  static mappedBy = [
+  static mappedBy = [				//Where to form the join.
     courses:'student',
     classAtts:'student'
   ]
 
-  /**
-   * TODO:
-   * Make the notes field use the "text" type, and name the column "student_notes" in the database
-   */
+						//Contraints.
   static constraints = {
-    fullStudentName(nullable:false, blank:false,maxSize:256);
+    studentFirstName(nullable:false, blank:false,maxSize:256);
     studentNumber(nullable:false, blank:false,maxSize:256);
+    }
+
+  static mapping = {			
+    table 'student'
+    studentFirstName column: 'first_name'
+    studentLastName column: 'last_name'
+    studentNumber column: 'student_number'
+    studentNotes column: 'student_notes', type:'text'	  
+
   }
 }

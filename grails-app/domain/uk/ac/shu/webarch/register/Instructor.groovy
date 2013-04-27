@@ -8,6 +8,7 @@ package uk.ac.shu.webarch.register
  *
  *
  */
+
 class Instructor {
 
   /* Remember that all domain classes get an "id" property by default which is

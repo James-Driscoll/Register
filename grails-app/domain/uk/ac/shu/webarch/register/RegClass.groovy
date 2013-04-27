@@ -1,23 +1,24 @@
 package uk.ac.shu.webarch.register
 
-class RegClass {
+class RegClass {		//Class Name
 
-  /* Class name */
-  String name
+				//Attributes
+				
+  String sessionCode		//Class code - Used in URLs to generate short clean COOL URLs
+  String sessionName  
 
-  /* Class code - Used in URLs to generate short clean COOL URLs */
-  String code
+  
+  Instructor classInstructor	//Instructor teaching this class
 
-  /* Instructor teaching this class */
-  Instructor classInstructor
+  Course course			//This class is an occurrence of which course?
 
-  /* This class is an occurrence of which course? */
-  Course course
-
-  /* The set of students enrolled on this class */
-  Set enrolledSudents
+  
+  Set enrolledSudents		//The set of students enrolled on this class
   Set registrationSheets
 
+
+
+				//Relationships
   static hasMany = [
     enrolledStudents:Enrollment, registrationSheets:RegistrationSheet
   ]
@@ -28,10 +29,12 @@ class RegClass {
 
   static constraints = {
   }
-
+				//Constraints
   static mapping = {
     classInstructor column:'instructor_fk'
     course column:'course_fk'
+    sessionCode column: 'session_code'
+    sessionName column: 'session_name'
   }
 
    
