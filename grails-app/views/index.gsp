@@ -8,7 +8,9 @@
 	  <p>This is the Register application</a>
 	  <br /><br /><br />
 	  <g:link controller="Instructor">Instructors</g:link>
-	  <!--<g:link controller="Instructor">text</g:link>-->
 	  <br /><br /><br />
-	</body>
+	  <g:link controller="Student">Manage Students</g:link>
+ 	  <br /><br /><br />
+	  <g:link controller="Course">Manage Courses</g:link>
+	 	</body>
 </html>
