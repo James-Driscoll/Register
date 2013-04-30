@@ -6,8 +6,13 @@ class Student {
   String name
   String comment
   
-  static hasMany = [RegEntries: RegisterEntry]
-  static mappedBy = [RegEntries: "RegistrationSheet"]
+  Set courses
+  Set regEntries
+  
+
+  static hasMany = [courses: Enrollment, regEntries: RegisterEntry]
+
+  static mappedBy = [courses: "student", regEntries: "student"]
 
   static constraints = {
     studentNo(nullable:false, blank:false, maxSize:10);

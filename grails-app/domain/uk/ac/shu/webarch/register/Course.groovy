@@ -6,6 +6,8 @@ class Course {
   String Name
   String description
 
+  Set sessions
+
   static hasMany = [sessions: Session]
   static mappedBy = [sessions: "course"]
  

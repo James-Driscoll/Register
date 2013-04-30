@@ -5,6 +5,8 @@ class Instructor {
   String instructorNo
   String name
   
+  Set sessions
+
   static hasMany = [sessions: Session]
   static mappedBy = [sessions: "instructor"]
 

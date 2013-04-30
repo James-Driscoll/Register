@@ -7,8 +7,12 @@ class Session {
   Course course
   Instructor instructor
 
-  static hasMnay = [registrationSheets: RegistrationSheet]
-  static mappedBy = [registrationSheets: "session"]
+  Set registrationSheets
+  Set enrolledStudents
+
+  static hasMnay = [registrationSheets: RegistrationSheet, enrolledStudents: Enrollment]
+  
+  static mappedBy = [registrationSheets: "session", enrolledStudents: "session"]
 
   static constraints = {
     sessionCode(nullable:false, blank:false, maxSize:10);

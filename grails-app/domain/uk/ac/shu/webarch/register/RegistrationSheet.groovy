@@ -6,9 +6,10 @@ class RegistrationSheet {
   String comment
   Session session
 
+  Set regEntries
 
-  static hasMany = [RegEntries: RegisterEntry]
-  static mappedBy = [RegEntries: "RegistrationSheet"]
+  static hasMany = [regEntries: RegisterEntry]
+  static mappedBy = [regEntries: "registrationSheet"]
   
   static constraints = {
     date(nullable:false, blank:false, maxSize:10);
