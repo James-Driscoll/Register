@@ -9,4 +9,11 @@ class RegisterEntry {
   static constraints = {
     time(nullable:false, blank:false, maxSize:20);  
     }
+
+  static mapping = {
+    table 'student_register_enter'
+    student column: 'student_fk'
+  }
+
+
 }

@@ -3,7 +3,7 @@ package uk.ac.shu.webarch.register
 class Course {
   
   String courseCode
-  String Name
+  String name
   String description
 
   Set sessions
@@ -11,10 +11,15 @@ class Course {
   static hasMany = [sessions: Session]
   static mappedBy = [sessions: "course"]
  
-
-    static constraints = {
+  static constraints = {
     courseCode(nullable:false, blank:false, maxSize:10);
     name(nullable:false, blank:false, maxSize:50);
     description(nullable:true, blank:true);
     }
+
+  static mapping = {
+    table 'course'
+    description column: 'course_desc', type:'text'
+  }
+
 }

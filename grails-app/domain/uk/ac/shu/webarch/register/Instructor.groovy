@@ -4,6 +4,7 @@ class Instructor {
 
   String instructorNo
   String name
+  String password
   
   Set sessions
 
@@ -13,5 +14,6 @@ class Instructor {
   static constraints = {
     instructorNo(nullable:false, blank:false, maxSize:10);
     name(nullable:false, blank:false, maxSize:50);
+    password(nullable:false, black:false, maxsize:25);
   }
 }

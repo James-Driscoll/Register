@@ -17,5 +17,10 @@ class Session {
   static constraints = {
     sessionCode(nullable:false, blank:false, maxSize:10);
     name(nullable:false, blank:false, maxSize:10);
-    }
+  }
+  
+  static mapping = {
+    instructor column:'instructor_fk'
+    course column:'course_fk'
+  }
 }
