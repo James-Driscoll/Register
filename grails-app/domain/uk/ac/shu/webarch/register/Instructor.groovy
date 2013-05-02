@@ -14,6 +14,6 @@ class Instructor {
   static constraints = {
     instructorNo(nullable:false, blank:false, maxSize:10);
     name(nullable:false, blank:false, maxSize:50);
-    password(nullable:false, black:false, maxsize:25);
+    password(nullable:true, black:true, maxsize:25);
   }
 }
