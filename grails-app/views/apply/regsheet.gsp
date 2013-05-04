@@ -12,12 +12,10 @@
  <body>
 </head>
 <body>
-<Title>Instructor</Title>
-<h1>Register - Instructor Home</h1>
+<Title>Register</Title>
+<h1>Take a Register</h1>
    <div style="width:220px">
-     <br /><br /><br /> 
-     <g:link controller="Apply" action="regsheet">Take a new register.</g:link>
-     <br /><br /><br />
-    </div>
+     
+  </div>
 </body>
 </html>

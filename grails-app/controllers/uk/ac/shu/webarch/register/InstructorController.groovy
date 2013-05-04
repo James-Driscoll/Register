@@ -7,6 +7,7 @@ class InstructorController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
+      
     }
 
     def list(Integer max) {
@@ -98,14 +99,4 @@ class InstructorController {
             redirect(action: "show", id: id)
         }
     }
-
-
-    def InstructorHome() {
-     
-    }
-
-
-
-
-
 }

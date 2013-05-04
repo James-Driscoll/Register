@@ -6,10 +6,10 @@ import grails.test.mixin.*
 import org.junit.*
 
 /**
- * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
+ * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(RegClass)
-class RegClassTests {
+@TestFor(ApplyController)
+class ApplyControllerTests {
 
     void testSomething() {
        fail "Implement me"
