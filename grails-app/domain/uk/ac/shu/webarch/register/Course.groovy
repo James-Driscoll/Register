@@ -12,8 +12,8 @@ class Course {
   static mappedBy = [sessions: "course"]
  
   static constraints = {
-    courseCode(nullable:false, blank:false, maxSize:10);
-    name(nullable:false, blank:false, maxSize:50);
+    courseCode(nullable:false, blank:false, maxSize:50);
+    name(nullable:false, blank:false, maxSize:150);
     description(nullable:true, blank:true);
     }
 

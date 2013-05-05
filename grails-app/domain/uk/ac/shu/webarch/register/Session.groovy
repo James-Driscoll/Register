@@ -15,8 +15,8 @@ class Session {
   static mappedBy = [registrationSheets: "session", enrolledStudents: "session"]
 
   static constraints = {
-    sessionCode(nullable:false, blank:false, maxSize:10);
-    name(nullable:false, blank:false, maxSize:10);
+    sessionCode(nullable:false, blank:false, maxSize:50);
+    name(nullable:false, blank:false, maxSize:150);
   }
   
   static mapping = {

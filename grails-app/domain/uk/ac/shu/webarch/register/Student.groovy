@@ -15,8 +15,8 @@ class Student {
   static mappedBy = [courses: "student", regEntries: "student"]
 
   static constraints = {
-    studentNo(nullable:false, blank:false, maxSize:10);
-    name(nullable:false, blank:false, maxSize:50);
+    studentNo(nullable:false, blank:false, maxSize:50);
+    name(nullable:false, blank:false, maxSize:150);
     comment(nullable:true, blank:true);
   }
 }

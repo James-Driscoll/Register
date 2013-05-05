@@ -12,7 +12,7 @@ class RegistrationSheet {
   static mappedBy = [regEntries: "registrationSheet"]
   
   static constraints = {
-    date(nullable:false, blank:false, maxSize:10);
+    date(nullable:false, blank:false, maxSize:50);
     comment(nullable:true, blank:true);
   }
 }

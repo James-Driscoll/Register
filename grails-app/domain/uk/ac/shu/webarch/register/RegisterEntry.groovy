@@ -7,7 +7,7 @@ class RegisterEntry {
   Student student  
 
   static constraints = {
-    time(nullable:false, blank:false, maxSize:20);  
+    time(nullable:false, blank:false, maxSize:50);  
     }
 
   static mapping = {
