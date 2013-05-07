@@ -1,18 +1,22 @@
-package uk.ac.shu.webarch.register
+package uk.ac.shu.webarch.register			//Packages.
 
-class RegistrationSheet {
+class RegistrationSheet {				//Class name.
 
-  String date
-  String comment
-  Session session
+  String date						//Date of registration.
+  String comment					//Any comments necessary.
+  Session session					//Session object.
 
-  Set regEntries
+  Set regEntries					//Registration sheet contains many register entries.
 
-  static hasMany = [regEntries: RegisterEntry]
-  static mappedBy = [regEntries: "registrationSheet"]
+  static hasMany = [regEntries: RegisterEntry]		//One-to-many expression.
+  static mappedBy = [regEntries: "registrationSheet"]	//Link.
   
-  static constraints = {
+  static constraints = {				//Constraints that need to be met for successful record creation.	
     date(nullable:false, blank:false, maxSize:50);
     comment(nullable:true, blank:true);
+  }
+  
+  static mapping = {
+    comment column: 'regsheet_comment', type:'text'	//Long text field.
   }
 }

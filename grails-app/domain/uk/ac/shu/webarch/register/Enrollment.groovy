@@ -1,16 +1,16 @@
-package uk.ac.shu.webarch.register
+package uk.ac.shu.webarch.register		//Packages.
 
-class Enrollment {
+class Enrollment {				//Class name.
 
-  Student student
-  Session session 
+  Student student				//Student object.
+  Session session 				//Session object.
 
-    static constraints = {
+    static constraints = {			//No constraints necessary as they are already in the session and student classes.
     }
 
-  static mapping = {
-    table 'course_student'
-    student column: 'student_fk'
+  static mapping = {				
+    table 'course_student'			//Set link table name.
+    student column: 'student_fk'		//Set foreign key column names to more understandable names.
     session column: 'session_fk'
     }
 

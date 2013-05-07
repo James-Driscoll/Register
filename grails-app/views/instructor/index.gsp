@@ -16,6 +16,8 @@
 <h1>Register - Instructor Home</h1>
    <div style="width:220px">
      <br /><br /><br /> 
+     <g:link controller="Session" action="insseslist">View all Sessions.</g:link>
+     <br /><br /><br />
      <g:link controller="Apply" action="regsheet">Take a new register.</g:link>
      <br /><br /><br />
     </div>

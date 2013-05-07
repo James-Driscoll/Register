@@ -8,10 +8,12 @@ class StudentController {
 
     def index() {
     }
-
+   
     def login() {
-       
     }
+
+
+
 
 
 
