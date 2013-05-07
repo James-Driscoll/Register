@@ -10,7 +10,7 @@ class SessionController {
 
       result.SessionList = []
 
-      Session.findAll().each { cls ->
+      Session.findby().each { cls ->
         result.SessionList.add([courseCode:cls.course.courseCode, 
                                 courseName:cls.course.name,
                                 sessionCode:cls.sessionCode, 
@@ -23,8 +23,8 @@ class SessionController {
         json { render result as JSON }
       }  
      
-      def s = enrollment.findbyStudentandSession(1, 2)
-      render s
+      //def s = enrollment.findbyStudentandSession(1, 2)
+      //render s
 
     }
     //End of Index action.
