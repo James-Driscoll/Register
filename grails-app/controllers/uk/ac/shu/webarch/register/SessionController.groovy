@@ -9,24 +9,6 @@ class SessionController {
 
  
     def index() {
-        
-      def result=[:]			//Declare an empty map.
-
-        result.SessionList = []		
-
-        Session.findby().each { cls ->		//Find 
-          result.SessionList.add([courseCode:cls.course.courseCode, 
-                                  courseName:cls.course.name,
-                                  sessionCode:cls.sessionCode, 
-                                  sessionName:cls.name,
-                                  instructorName:cls.instructor.name])
-          }
-        withFormat {
-          html result
-          xml { render result as XML }
-          json { render result as JSON }
-        }  
-     
     }
     //End of Index action.
 

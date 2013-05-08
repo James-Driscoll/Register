@@ -10,6 +10,35 @@ class InstructorController {
     }
 
 
+    def login() { 		
+      
+      def anInstructor = Instructor.findByInstructorNo(params.username)	//Read data from g:form on view. 
+      
+      if((anInstructor.instructorNo == params.username) && (anInstructor.password == params.password)){ 
+        flash.message = "Login Successful"			//Verify login details.
+        session.user = "${anInstructor.name}"			//Use flash method to display message on view.
+        							//Begin new session.
+							
+      }else{							
+        flash.message = "Login Failed"				//Else login unsuccessful.	
+      }
+    
+     redirect(action: 'index')					//Do not search for view called Login.
+           
+    }
+    //End of Login action.
+
+
+
+    def logout = {
+      session.user = null					//End session.
+      redirect(action: 'index')			
+    }
+    //End of Logout action.
+
+
+
+
 	//Scaffold CRUD operations.
 
     def list(Integer max) {
