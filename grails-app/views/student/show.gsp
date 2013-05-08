@@ -50,6 +50,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${studentInstance?.password}">
+				<li class="fieldcontain">
+					<span id="password-label" class="property-label"><g:message code="student.password.label" default="Password" /></span>
+					
+						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${studentInstance}" field="password"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${studentInstance?.courses}">
 				<li class="fieldcontain">
 					<span id="courses-label" class="property-label"><g:message code="student.courses.label" default="Courses" /></span>

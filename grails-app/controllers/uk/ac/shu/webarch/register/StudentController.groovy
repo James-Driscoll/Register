@@ -8,15 +8,39 @@ class StudentController {
 
     def index() {
     }
-   
-    def login() {
+      
+    def login() { 
+      
+      def student = Student.findByStudentNo(params.username)	//Read data from g:form on view. 
+      flash.message = "student.password"
+      if((student.studentNo == params.username) && (student.password == params.password)){ 
+        flash.message = "Login Successful"			//Verify login details.
+        session.user = "${student.name}"			//Use flash method to display message on view.
+        							//Begin new session.
+      }else{							
+        //flash.message = "Login Failed"			//Else login unsuccessful.	
+      }
+    
+     redirect(action: 'index')					//Do not search for view called Login.
     }
+    //End of Login action.
+    
+
+
+    def logout = {
+      session.user = null					//End session.
+      redirect(action: 'index')			
+    }
+    //End of Logout action.
 
 
 
 
 
 
+
+
+		//Scaffold CRUD operations.
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)

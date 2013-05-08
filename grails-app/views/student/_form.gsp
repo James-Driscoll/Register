@@ -7,7 +7,7 @@
 		<g:message code="student.studentNo.label" default="Student No" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="studentNo" maxlength="10" required="" value="${studentInstance?.studentNo}"/>
+	<g:textField name="studentNo" maxlength="50" required="" value="${studentInstance?.studentNo}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'name', 'error')} required">
@@ -15,7 +15,7 @@
 		<g:message code="student.name.label" default="Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="name" maxlength="50" required="" value="${studentInstance?.name}"/>
+	<g:textField name="name" maxlength="150" required="" value="${studentInstance?.name}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'comment', 'error')} ">
@@ -24,6 +24,14 @@
 		
 	</label>
 	<g:textField name="comment" value="${studentInstance?.comment}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'password', 'error')} required">
+	<label for="password">
+		<g:message code="student.password.label" default="Password" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="password" maxlength="50" required="" value="${studentInstance?.password}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'courses', 'error')} ">
