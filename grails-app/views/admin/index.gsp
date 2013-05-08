@@ -22,6 +22,12 @@
       <g:link controller="Student" action="list">Manage Students.</g:link>
       <br /><br /><br />
       <g:link controller="Instructor" action="list">Manage Instructors.</g:link>
+      <br /><br /><br /><br />
+      <g:link controller="Course" action="list">Manage Courses.</g:link>
+      <br /><br /><br /><br />      
+      <g:link controller="Enrollment" action="list">Manage Enrollments.</g:link>
+      <br /><br /><br /><br />
+      <g:link controller="Session" action="list">Manage Sessions.</g:link>
       <br /><br /><br /><br />    
       <g:link action="logout">Logout</g:link>
     </g:if>
