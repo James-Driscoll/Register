@@ -1,6 +1,7 @@
 package uk.ac.shu.webarch.register
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.converters.*
 
 class StudentController {
 
@@ -9,22 +10,54 @@ class StudentController {
     def index() {
     }
       
-    def login() { 
+    def login() { 		
       
       def student = Student.findByStudentNo(params.username)	//Read data from g:form on view. 
-      flash.message = "student.password"
+      
       if((student.studentNo == params.username) && (student.password == params.password)){ 
         flash.message = "Login Successful"			//Verify login details.
         session.user = "${student.name}"			//Use flash method to display message on view.
-        							//Begin new session.
+        
+	
+
+	//Here I am attempting to display a list of sessions that only THIS student is enrolled onto.
+
+//       def anEnrollment = Enrollment.findByStudent(student)	//An enrollment object that has a specific student.           
+       
+//       def aSession = anEnrollment.session			//The session object from the enrollment object.
+
+//       def aSessionCode = aSession.sessionCode			//The session code from the session object.
+   
+//      def result=[:]						//Declare an empty map.
+
+//        result.SessionList = []					
+
+//        Session.findAllBySessionCode(aSessionCode).each { ses ->	//Find all sessions with the specific session code.		 
+//          result.SessionList.add([courseCode:ses.course.courseCode, 	//Populate the list.
+//                                  courseName:ses.course.name,
+//                                  sessionCode:ses.sessionCode, 
+//                                  sessionName:ses.name,
+//                                  instructorName:cls.instructor.name])
+//          }
+//        withFormat {						//Output returnable as html, json or xml.
+//          html result
+//          xml { render result as XML }
+//          json { render result as JSON }
+//        }
+
+
+
+								//Begin new session.
       }else{							
-        //flash.message = "Login Failed"			//Else login unsuccessful.	
+        flash.message = "Login Failed"				//Else login unsuccessful.	
       }
     
      redirect(action: 'index')					//Do not search for view called Login.
+       
+     
     }
     //End of Login action.
-    
+
 
 
     def logout = {
@@ -32,6 +65,7 @@ class StudentController {
       redirect(action: 'index')			
     }
     //End of Logout action.
+
 
 
 

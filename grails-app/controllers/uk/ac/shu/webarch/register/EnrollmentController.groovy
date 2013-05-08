@@ -7,9 +7,11 @@ class EnrollmentController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
-        redirect(action: "list", params: params)
     }
 
+
+	//Scaffold CRUD operations.
+	
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         [enrollmentInstanceList: Enrollment.list(params), enrollmentInstanceTotal: Enrollment.count()]

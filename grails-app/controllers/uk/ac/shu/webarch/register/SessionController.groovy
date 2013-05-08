@@ -10,11 +10,11 @@ class SessionController {
  
     def index() {
         
-      def result=[:]
+      def result=[:]			//Declare an empty map.
 
-        result.SessionList = []
+        result.SessionList = []		
 
-        Session.findby().each { cls ->
+        Session.findby().each { cls ->		//Find 
           result.SessionList.add([courseCode:cls.course.courseCode, 
                                   courseName:cls.course.name,
                                   sessionCode:cls.sessionCode, 
@@ -54,28 +54,24 @@ class SessionController {
     //End SessionDetail action.
 
 
-
-
-   //Scaffold CRUD operations.
-
    def insseslist() {
         
-    def result=[:]
+     def result=[:]
 
-      result.SessionList = []
-
-      Session.findAll().each { cls ->
-        result.SessionList.add([courseCode:cls.course.courseCode, 
-                                courseName:cls.course.name,
-                                sessionCode:cls.sessionCode, 
-                                sessionName:cls.name,
-                                instructorName:cls.instructor.name])
-    }
-      withFormat {
-        html result
-        xml { render result as XML }
-        json { render result as JSON }
-      }  
+       result.SessionList = []
+ 
+       Session.findAll().each { cls ->
+         result.SessionList.add([courseCode:cls.course.courseCode, 
+                                 courseName:cls.course.name,
+                                 sessionCode:cls.sessionCode, 
+                                 sessionName:cls.name,
+                                 instructorName:cls.instructor.name])
+     }
+       withFormat {
+         html result
+         xml { render result as XML }
+         json { render result as JSON }
+       }  
     }
     //End of InsSesList Action.
 
@@ -83,14 +79,7 @@ class SessionController {
 
 
 
-
-
-
-
-
-
-
-
+	//Scaffold CRUD operations.
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)

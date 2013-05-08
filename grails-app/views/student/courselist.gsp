@@ -1,21 +1,19 @@
 <html>
   <head>
-  <meta name="layout" content="main"/>
-  <title></title>
-  <style type="text/css">
-    label{
-      float:left;
-      width:65px;
-    }
-  
-  </style>  
+    <meta name="layout" content="main"/>
+    <style type="text/css">
+      label{
+        float:left;
+        width:65px;
+      }
+    </style>  
   </head>
-<body>
-    
-  <h1>Your Courses</h1>
-  <br/>
-   This is a list of your classes, select the session that you wish to sign in to.<br/><br/><br/>
-   <table>
+  <body>
+    <title>Register - Student: Your Classes</title> 
+    <h1>Studebt - Your Courses</h1>
+    <br/>
+    This is a list of your classes, select the session that you wish to sign in to.<br/><br/><br/>
+    <table>
       <thead>
         <tr>
           <td>Course Code</td>

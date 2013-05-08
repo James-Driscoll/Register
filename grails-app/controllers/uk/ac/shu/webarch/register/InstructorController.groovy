@@ -7,8 +7,10 @@ class InstructorController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
-      
     }
+
+
+	//Scaffold CRUD operations.
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)

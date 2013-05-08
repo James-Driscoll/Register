@@ -7,12 +7,14 @@ class ApplyController {
     //End of Index action.
 
 
-
     def processattendance() {
-    
     }
     //End of ProcessAttendance action.
 
+
+    def listactiveclasses() {
+    }
+    //End of ListActiveClasses action.
 
 
     def regsheet() {

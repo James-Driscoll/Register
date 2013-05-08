@@ -20,7 +20,9 @@
       <b>Logged in as: </b>${session.user}  
       <br /><br />
       <g:link controller="Session">View your classes.</g:link>
-      <br /><br /><br /><br />    
+      <br /><br />
+      **${enroll}
+      <br /><br />    
       <g:link action="logout">Logout</g:link>
     </g:if>
     <g:else>  

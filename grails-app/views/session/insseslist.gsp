@@ -1,15 +1,17 @@
 <html>
   <head>
-  <meta name="layout" content="main"/>
-  <title>All Sessions</title>
-  <style type="text/css">
-    label{
-      float:left;
-      width:65px;
-    }
-  </style>  
+    <meta name="layout" content="main"/>
+    <style type="text/css">
+      label{
+        float:left;
+        width:65px;
+      }
+    </style>  
   </head>
-<body>
+  <body>
+    <Title>All Sessions</Title>
+    <h1>Register - Instructor: All Sessions</h1>
+    <g:link controller="Home" action="index">Back to Home</g:link>
     <table>
       <thead>
         <tr>
