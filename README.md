@@ -7,7 +7,7 @@ This project is a portfolio entry for the Sheffield Hallam Web Architectures mod
 
 I am a Computing student, and this is my first implementation using a Model View Controller framework. The Register application unfortunately does not contain all the functionality required for a release grade development however it does portray a journey of experimentation with an unfamiliar system. It is recommended you view the commit history for a detailed timeline of development.
 
-
+Please feel free to leave comments or feedback with regards to Register.
 
 
 Project Download
@@ -19,11 +19,13 @@ In order to fully test the application locally it is possible to download the pr
 
 o	Here is a link to the download page for Debian if it is required: http://www.debian.org/distrib/netinst
 
+
 •	A working installation of Grails is crucial.
 
 o	Grails download: http://grails.org/download
 
 o	Grails apt package manager install for Ubuntu: http://grails.org/download/ubuntu
+
 
 •	A working installation of MySQL, with Register database setup.
 
@@ -35,6 +37,7 @@ o	This command creates the database necessary for the Register application: crea
 
 o	This commands grants access to the database by a local user, called ‘webarch’: grant all on register.* to 'webarch'@'localhost' identified by 'webarch';
 
+
 •	A working installation of Git. To install on Debian, it is possible to use: apt-get install git
 
 •	Now the target machine should be ready to download the project data. Open the Terminal and navigate using cd and ls to the parent directory that you would like the application to be installed into. Type:
@@ -43,13 +46,13 @@ o	git clone git://github.com/b1015297/Register.git
 
 o	This will download a read-only copy of the git project to your local directory.
 
+
 •	The application is now ready to be run. Type grails run-app
 
+
 •	When this operation has completed it should display a link, open this link in a web browser to use the application.
+
 
 •	When finished testing the application, the project directory can simply be deleted from the local machine.
 
 o	It is also recommended that the database is removed. To do this open MySQL in the Terminal and type drop database register;
-
-
-
